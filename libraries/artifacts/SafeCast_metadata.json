@@ -1,0 +1,47 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"title": "安全强制转换",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Contains methods for safely casting between types",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"libraries/SafeCast.sol": "SafeCast"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"libraries/SafeCast.sol": {
+			"keccak256": "0xf228334a3da7f7927e880a8bb2baa8d0581093207182faca447b09e198b751fc",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://b3b7b23b14b8fd8c46976b711ff1293a7da6ae0ec67195011cdf736fa559b489",
+				"dweb:/ipfs/QmRE1hdsgThaj9DPTGwKpAzttmMdNzw2WZ6poQQm4S2N4G"
+			]
+		}
+	},
+	"version": 1
+}

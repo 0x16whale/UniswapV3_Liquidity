@@ -1,0 +1,48 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "Instances of stored oracle data, \"observations\", are collected in the oracle array Every pool is initialized with an oracle array length of 1. Anyone can pay the SSTOREs to increase the maximum length of the oracle array. New slots will be added when the array is fully populated. Observations are overwritten when the full length of the oracle array is populated. The most recent observation is available, independent of the length of the oracle array, by passing 0 to observe()",
+			"kind": "dev",
+			"methods": {},
+			"title": "Oracle 预言机计算",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Provides price and liquidity data useful for a wide variety of system designs",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"libraries/Oracle.sol": "Oracle"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"libraries/Oracle.sol": {
+			"keccak256": "0xbc02222edf4bdcacedc74bceb6c5643f211e2df9b3dbf9005c8b8be794aec92e",
+			"license": "BUSL-1.1",
+			"urls": [
+				"bzz-raw://81ed4d00c7f05efac56c80e109acb8a8ee64daf6784834f9de6ec6fd606e5fb5",
+				"dweb:/ipfs/QmaEBgm9EnkLgMKktDvx3u56eXVmZfspjXpRuQ2kCurXf7"
+			]
+		}
+	},
+	"version": 1
+}

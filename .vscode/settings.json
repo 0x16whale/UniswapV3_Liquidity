@@ -1,0 +1,5 @@
+{
+    "solidity.compileUsingLocalVersion": "c:\\fujiate\\git\\UniswapV3_Liquidity\\soljson-v0.7.6+commit.7338295f.js",
+    "solidity.compileUsingRemoteVersion": "v0.7.6+commit.7338295f",
+    "solidity.defaultCompiler": "localFile"
+}

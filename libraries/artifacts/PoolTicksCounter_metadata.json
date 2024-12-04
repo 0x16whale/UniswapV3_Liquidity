@@ -1,0 +1,101 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"libraries/PoolTicksCounter.sol": "PoolTicksCounter"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"interfaces/IUniswapV3Pool.sol": {
+			"keccak256": "0x33e31bebc692bce4bbe0d5575cad32c1473aebaebd8164733a023572471136ff",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://4130925a601ba87ed919f18563f9fbbc4099cfe9b51fec09a0623de25724a9b0",
+				"dweb:/ipfs/Qmd5czyfkiRR2jZ2n8ZeKDCAH6HTyzcKkEM1rWLZ9Coozp"
+			]
+		},
+		"interfaces/pool/IUniswapV3PoolActions.sol": {
+			"keccak256": "0x9dcec803e1bb4d5a5adb72ab959c3957cbeff429f4b1c829374372c684990ee3",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://8348cea7c3d67526b5702bb3eceacba6652d0c7fcbaea6aa739a6d474d91bbfc",
+				"dweb:/ipfs/QmYYhEHSnJSsNBPPjXTke4bpXW6YtK9akeDof8eDVCoGVj"
+			]
+		},
+		"interfaces/pool/IUniswapV3PoolDerivedState.sol": {
+			"keccak256": "0x89c305b25f4c8e0b486efd7babf8b7c0eeceb417cdef24371320167edac4f1af",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://7db14aa035390900cc65bc120828a8072d0d77b02af0776a3037046acd17cede",
+				"dweb:/ipfs/QmfEdAF5ooeppuhKT7CbKfABYHekUPQvMoxNQfzrxXHjFE"
+			]
+		},
+		"interfaces/pool/IUniswapV3PoolEvents.sol": {
+			"keccak256": "0xa2f030ae26fb12eb82947791994474da6bbf3065658008ef18c6a37ea8c4ee6c",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://8554f3d48ee3433417c38ed7f7a9ca2c313679a9aa97e583b1b01af7c53c931e",
+				"dweb:/ipfs/QmQsLobFDQrsn8Vgup86FAKEgJqb9ZUyhrejcVjoNgsnxF"
+			]
+		},
+		"interfaces/pool/IUniswapV3PoolImmutables.sol": {
+			"keccak256": "0xba3a5ffc88dcc4133e943e23313e41476e29b8478ee1ba1495e353a8ad9141a6",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://36ef120748ee4dc22b31272f82820b00451059e6026d2b595bf39a863faf7d16",
+				"dweb:/ipfs/QmSDzybBz4fjRgdt9Hx4eaTufGUZT142bNkPaZTQq5jSxv"
+			]
+		},
+		"interfaces/pool/IUniswapV3PoolOwnerActions.sol": {
+			"keccak256": "0x0d3a6c36b5cc653a4a5db9a87c80f8439ae1f9f6e90edd45731bc40f60302e55",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://0dd270ee8c749c67a6ddebe83b8e85a0133af2005e1caed2d4f9f041bd9beeb1",
+				"dweb:/ipfs/Qmcdc6pGKkfStihb57kUbVSEPxEW421rifyRyWRgWTLbGg"
+			]
+		},
+		"interfaces/pool/IUniswapV3PoolState.sol": {
+			"keccak256": "0xed929228e67a5fd94861fff56f0f3ed33a5673acce2366e52f99ad8cbab4d7e0",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://a45daeb13dd33b2c668455f02de50a9d1ec68f0dc012ba6e16f043aaa8c68afc",
+				"dweb:/ipfs/QmRUFbtyWRV1iGGApVyeXJhacE5hXj8wjjWGUsgFAXaPEm"
+			]
+		},
+		"libraries/PoolTicksCounter.sol": {
+			"keccak256": "0x9b16e50dec6f52c74a14e683d8ced3b168f7b968d1ebfba15e5d2ab1f7bbd045",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://023bd0657cd4d4ffc55b3b670996034183b77bc42f6aaa087d289263cef24d76",
+				"dweb:/ipfs/QmWoHRwgWPfjaWpEaPhYVkwSvDnkC83xv4Dwr1zYsdcNWG"
+			]
+		}
+	},
+	"version": 1
+}

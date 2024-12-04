@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "Positions store additional state for tracking fees owed to the position",
+			"kind": "dev",
+			"methods": {},
+			"title": "Position 主要用于更新流动性的头寸",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Positions represent an owner address' liquidity between a lower and upper tick boundary",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"libraries/Position.sol": "Position"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"libraries/FixedPoint128.sol": {
+			"keccak256": "0x1f240cef3859d83bf8f015eb9309db12995af4959f3cb3cd60698bbcef1bb777",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://fedb17ab2d4c7199d65c64ff975ab02eacd5e2588e107e72ab49a3f3e2db6b2c",
+				"dweb:/ipfs/QmaueCBt2yroVZuPEbhBoNUi99NKdtxq3MLPcg3THrR6u3"
+			]
+		},
+		"libraries/FullMath.sol": {
+			"keccak256": "0x64b61af37111d6035419dcc4e476084e46244df78b9ca7843a338632cae90516",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d4ccff2535b4df812a02013d8932cb6935256bbedfc8f29f5dbac3711e8a11cd",
+				"dweb:/ipfs/QmajCAiGoxtM6yV48CAi91aZVhzf3WnymuHTVLSVKWq5Q7"
+			]
+		},
+		"libraries/LiquidityMath.sol": {
+			"keccak256": "0xf863a342166d90068fed75af532c6f75bcf7a2e6f445cd47fca52448771152d7",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://fae72765f1eb801ce906998110e9768fc0f078a1fa6ef5272df8ce66ce9d8a48",
+				"dweb:/ipfs/QmVXJBzJDfR283sxuYAqyFqP3asX4d4sSbGUm22PXAo3cQ"
+			]
+		},
+		"libraries/Position.sol": {
+			"keccak256": "0xccc705d736941d1559b9af94ef96afad51c4906397aa04d408f387e266dfd275",
+			"license": "BUSL-1.1",
+			"urls": [
+				"bzz-raw://d267c1295e0e9067e639892079f111bc82a5129b95dafe55d89e45bcede14595",
+				"dweb:/ipfs/QmXHhemzmui42oX8RgwqERuucZQA65hyoDiZGe6TGTkWZj"
+			]
+		}
+	},
+	"version": 1
+}

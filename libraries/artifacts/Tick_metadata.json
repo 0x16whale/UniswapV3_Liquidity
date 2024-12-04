@@ -1,0 +1,79 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"title": "Tick 用于管理 tick 处理相关的操作和计算",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Contains functions for managing tick processes and relevant calculations",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"libraries/Tick.sol": "Tick"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"libraries/LiquidityMath.sol": {
+			"keccak256": "0xf863a342166d90068fed75af532c6f75bcf7a2e6f445cd47fca52448771152d7",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://fae72765f1eb801ce906998110e9768fc0f078a1fa6ef5272df8ce66ce9d8a48",
+				"dweb:/ipfs/QmVXJBzJDfR283sxuYAqyFqP3asX4d4sSbGUm22PXAo3cQ"
+			]
+		},
+		"libraries/LowGasSafeMath.sol": {
+			"keccak256": "0xa1c4e3fded4cbcb5146495e044472a46c6b6d52eebbd58b08a2bdff64ba49c53",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://58eab40a9186a5735d9eb236451c82a526d6ede5480f4f57313fa0729fe6c3c2",
+				"dweb:/ipfs/QmeQSfCC79MbckNNuy8ti4NinY6yKmFxUbJdrwJLoxJG2F"
+			]
+		},
+		"libraries/SafeCast.sol": {
+			"keccak256": "0xf228334a3da7f7927e880a8bb2baa8d0581093207182faca447b09e198b751fc",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://b3b7b23b14b8fd8c46976b711ff1293a7da6ae0ec67195011cdf736fa559b489",
+				"dweb:/ipfs/QmRE1hdsgThaj9DPTGwKpAzttmMdNzw2WZ6poQQm4S2N4G"
+			]
+		},
+		"libraries/Tick.sol": {
+			"keccak256": "0x0ea6e731fca1a2cc8698f1d4d3081e324ddb5c017abe3794147409a2b6a7e580",
+			"license": "BUSL-1.1",
+			"urls": [
+				"bzz-raw://31531748b3ca0794275b85365dc1f54fac2f3cfc0f4c4ed9b3e79f2062ac721c",
+				"dweb:/ipfs/QmV2aGXqkEvdJgj8be9nVxiJK2ZumjrbjnH4gUqk5YG3SJ"
+			]
+		},
+		"libraries/TickMath.sol": {
+			"keccak256": "0x0bc2419b67780f9ef41c80e685fd0613a94a9e16d738da259e181fbee8dc7ee2",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://93d569d0044418e2730293efe4d0d10fd100f28fae137c05cdb92c684898a860",
+				"dweb:/ipfs/QmYXRprqXE3uAGxXURQcuHs3QVZVwTmrv4924ShH6nMm3u"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,47 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"title": "Optimized overflow and underflow safe math operations",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Contains methods for doing math operations that revert on overflow or underflow for minimal gas cost",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"libraries/LowGasSafeMath.sol": "LowGasSafeMath"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"libraries/LowGasSafeMath.sol": {
+			"keccak256": "0xa1c4e3fded4cbcb5146495e044472a46c6b6d52eebbd58b08a2bdff64ba49c53",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://58eab40a9186a5735d9eb236451c82a526d6ede5480f4f57313fa0729fe6c3c2",
+				"dweb:/ipfs/QmeQSfCC79MbckNNuy8ti4NinY6yKmFxUbJdrwJLoxJG2F"
+			]
+		}
+	},
+	"version": 1
+}

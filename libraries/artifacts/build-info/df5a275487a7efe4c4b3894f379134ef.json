@@ -1,0 +1,705 @@
+{
+	"id": "df5a275487a7efe4c4b3894f379134ef",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.20",
+	"solcLongVersion": "0.8.20+commit.a1b79de6",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"libraries/UnsafeMath.sol": {
+				"content": "// SPDX-License-Identifier: GPL-2.0-or-later\r\npragma solidity ^0.7.6;\r\n\r\n/// @title Math functions that do not check inputs or outputs\r\n/// @notice Contains methods that perform common math functions but do not do any overflow or underflow checks\r\nlibrary UnsafeMath {\r\n    /// @notice Returns ceil(x / y)\r\n    /// @dev division by 0 has unspecified behavior, and must be checked externally\r\n    /// @param x The dividend\r\n    /// @param y The divisor\r\n    /// @return z The quotient, ceil(x / y)\r\n    function divRoundingUp(uint256 x, uint256 y) internal pure returns (uint256 z) {\r\n        assembly {\r\n            z := add(div(x, y), gt(mod(x, y), 0))\r\n        }\r\n    }\r\n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"contracts": {
+			"libraries/UnsafeMath.sol": {
+				"UnsafeMath": {
+					"abi": [],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"title": "Math functions that do not check inputs or outputs",
+						"version": 1
+					},
+					"evm": {
+						"assembly": "    /* \"libraries/UnsafeMath.sol\":248:674  library UnsafeMath {... */\n  dataSize(sub_0)\n  dataOffset(sub_0)\n  0x0b\n  dup3\n  dup3\n  dup3\n  codecopy\n  dup1\n  mload\n  0x00\n  byte\n  0x73\n  eq\n  tag_1\n  jumpi\n  mstore(0x00, 0x4e487b7100000000000000000000000000000000000000000000000000000000)\n  mstore(0x04, 0x00)\n  revert(0x00, 0x24)\ntag_1:\n  mstore(0x00, address)\n  0x73\n  dup2\n  mstore8\n  dup3\n  dup2\n  return\nstop\n\nsub_0: assembly {\n        /* \"libraries/UnsafeMath.sol\":248:674  library UnsafeMath {... */\n      eq(address, deployTimeAddress())\n      mstore(0x40, 0x80)\n      0x00\n      dup1\n      revert\n\n    auxdata: 0xa2646970667358221220ebeb1b37be51107c7454c2cd8a0dce225f6d459e17395835ea01a47f072a582864736f6c63430008140033\n}\n",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "6055604b600b8282823980515f1a607314603f577f4e487b71000000000000000000000000000000000000000000000000000000005f525f60045260245ffd5b305f52607381538281f3fe730000000000000000000000000000000000000000301460806040525f80fdfea2646970667358221220ebeb1b37be51107c7454c2cd8a0dce225f6d459e17395835ea01a47f072a582864736f6c63430008140033",
+							"opcodes": "PUSH1 0x55 PUSH1 0x4B PUSH1 0xB DUP3 DUP3 DUP3 CODECOPY DUP1 MLOAD PUSH0 BYTE PUSH1 0x73 EQ PUSH1 0x3F JUMPI PUSH32 0x4E487B7100000000000000000000000000000000000000000000000000000000 PUSH0 MSTORE PUSH0 PUSH1 0x4 MSTORE PUSH1 0x24 PUSH0 REVERT JUMPDEST ADDRESS PUSH0 MSTORE PUSH1 0x73 DUP2 MSTORE8 DUP3 DUP2 RETURN INVALID PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xEB 0xEB SHL CALLDATACOPY 0xBE MLOAD LT PUSH29 0x7454C2CD8A0DCE225F6D459E17395835EA01A47F072A582864736F6C63 NUMBER STOP ADDMOD EQ STOP CALLER ",
+							"sourceMap": "248:426:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "730000000000000000000000000000000000000000301460806040525f80fdfea2646970667358221220ebeb1b37be51107c7454c2cd8a0dce225f6d459e17395835ea01a47f072a582864736f6c63430008140033",
+							"opcodes": "PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xEB 0xEB SHL CALLDATACOPY 0xBE MLOAD LT PUSH29 0x7454C2CD8A0DCE225F6D459E17395835EA01A47F072A582864736F6C63 NUMBER STOP ADDMOD EQ STOP CALLER ",
+							"sourceMap": "248:426:0:-:0;;;;;;;;"
+						},
+						"gasEstimates": {
+							"creation": {
+								"codeDepositCost": "17000",
+								"executionCost": "92",
+								"totalCost": "17092"
+							},
+							"internal": {
+								"divRoundingUp(uint256,uint256)": "infinite"
+							}
+						},
+						"legacyAssembly": {
+							".code": [
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "PUSH #[$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "PUSH [$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "PUSH",
+									"source": 0,
+									"value": "B"
+								},
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "DUP3",
+									"source": 0
+								},
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "DUP3",
+									"source": 0
+								},
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "DUP3",
+									"source": 0
+								},
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "CODECOPY",
+									"source": 0
+								},
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "MLOAD",
+									"source": 0
+								},
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "BYTE",
+									"source": 0
+								},
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "PUSH",
+									"source": 0,
+									"value": "73"
+								},
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "EQ",
+									"source": 0
+								},
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "PUSH [tag]",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "JUMPI",
+									"source": 0
+								},
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "PUSH",
+									"source": 0,
+									"value": "4E487B7100000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "PUSH",
+									"source": 0,
+									"value": "4"
+								},
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "PUSH",
+									"source": 0,
+									"value": "24"
+								},
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "REVERT",
+									"source": 0
+								},
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "tag",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "JUMPDEST",
+									"source": 0
+								},
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "ADDRESS",
+									"source": 0
+								},
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "PUSH",
+									"source": 0,
+									"value": "73"
+								},
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "DUP2",
+									"source": 0
+								},
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "MSTORE8",
+									"source": 0
+								},
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "DUP3",
+									"source": 0
+								},
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "DUP2",
+									"source": 0
+								},
+								{
+									"begin": 248,
+									"end": 674,
+									"name": "RETURN",
+									"source": 0
+								}
+							],
+							".data": {
+								"0": {
+									".auxdata": "a2646970667358221220ebeb1b37be51107c7454c2cd8a0dce225f6d459e17395835ea01a47f072a582864736f6c63430008140033",
+									".code": [
+										{
+											"begin": 248,
+											"end": 674,
+											"name": "PUSHDEPLOYADDRESS",
+											"source": 0
+										},
+										{
+											"begin": 248,
+											"end": 674,
+											"name": "ADDRESS",
+											"source": 0
+										},
+										{
+											"begin": 248,
+											"end": 674,
+											"name": "EQ",
+											"source": 0
+										},
+										{
+											"begin": 248,
+											"end": 674,
+											"name": "PUSH",
+											"source": 0,
+											"value": "80"
+										},
+										{
+											"begin": 248,
+											"end": 674,
+											"name": "PUSH",
+											"source": 0,
+											"value": "40"
+										},
+										{
+											"begin": 248,
+											"end": 674,
+											"name": "MSTORE",
+											"source": 0
+										},
+										{
+											"begin": 248,
+											"end": 674,
+											"name": "PUSH",
+											"source": 0,
+											"value": "0"
+										},
+										{
+											"begin": 248,
+											"end": 674,
+											"name": "DUP1",
+											"source": 0
+										},
+										{
+											"begin": 248,
+											"end": 674,
+											"name": "REVERT",
+											"source": 0
+										}
+									]
+								}
+							},
+							"sourceList": [
+								"libraries/UnsafeMath.sol",
+								"#utility.yul"
+							]
+						},
+						"methodIdentifiers": {}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"title\":\"Math functions that do not check inputs or outputs\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"Contains methods that perform common math functions but do not do any overflow or underflow checks\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"libraries/UnsafeMath.sol\":\"UnsafeMath\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"libraries/UnsafeMath.sol\":{\"keccak256\":\"0xd6387f2ba9cbbb651830e52e51881e5189cc15ed3d38559108597213109ca08c\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://7ef6e845d6b3f4e1e7e678a759d1298e050fbbb0f0dcaccf1126dd4cfe041eb0\",\"dweb:/ipfs/QmPpxVdrEHTc6wdr7cSBzMNwrPHJWdhN5qFK8H1sNKamTj\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"notice": "Contains methods that perform common math functions but do not do any overflow or underflow checks",
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"libraries/UnsafeMath.sol": {
+				"ast": {
+					"absolutePath": "libraries/UnsafeMath.sol",
+					"exportedSymbols": {
+						"UnsafeMath": [
+							15
+						]
+					},
+					"id": 16,
+					"license": "GPL-2.0-or-later",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "46:23:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"canonicalName": "UnsafeMath",
+							"contractDependencies": [],
+							"contractKind": "library",
+							"documentation": {
+								"id": 2,
+								"nodeType": "StructuredDocumentation",
+								"src": "73:175:0",
+								"text": "@title Math functions that do not check inputs or outputs\n @notice Contains methods that perform common math functions but do not do any overflow or underflow checks"
+							},
+							"fullyImplemented": true,
+							"id": 15,
+							"linearizedBaseContracts": [
+								15
+							],
+							"name": "UnsafeMath",
+							"nameLocation": "256:10:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"body": {
+										"id": 13,
+										"nodeType": "Block",
+										"src": "581:90:0",
+										"statements": [
+											{
+												"AST": {
+													"nodeType": "YulBlock",
+													"src": "601:63:0",
+													"statements": [
+														{
+															"nodeType": "YulAssignment",
+															"src": "616:37:0",
+															"value": {
+																"arguments": [
+																	{
+																		"arguments": [
+																			{
+																				"name": "x",
+																				"nodeType": "YulIdentifier",
+																				"src": "629:1:0"
+																			},
+																			{
+																				"name": "y",
+																				"nodeType": "YulIdentifier",
+																				"src": "632:1:0"
+																			}
+																		],
+																		"functionName": {
+																			"name": "div",
+																			"nodeType": "YulIdentifier",
+																			"src": "625:3:0"
+																		},
+																		"nodeType": "YulFunctionCall",
+																		"src": "625:9:0"
+																	},
+																	{
+																		"arguments": [
+																			{
+																				"arguments": [
+																					{
+																						"name": "x",
+																						"nodeType": "YulIdentifier",
+																						"src": "643:1:0"
+																					},
+																					{
+																						"name": "y",
+																						"nodeType": "YulIdentifier",
+																						"src": "646:1:0"
+																					}
+																				],
+																				"functionName": {
+																					"name": "mod",
+																					"nodeType": "YulIdentifier",
+																					"src": "639:3:0"
+																				},
+																				"nodeType": "YulFunctionCall",
+																				"src": "639:9:0"
+																			},
+																			{
+																				"kind": "number",
+																				"nodeType": "YulLiteral",
+																				"src": "650:1:0",
+																				"type": "",
+																				"value": "0"
+																			}
+																		],
+																		"functionName": {
+																			"name": "gt",
+																			"nodeType": "YulIdentifier",
+																			"src": "636:2:0"
+																		},
+																		"nodeType": "YulFunctionCall",
+																		"src": "636:16:0"
+																	}
+																],
+																"functionName": {
+																	"name": "add",
+																	"nodeType": "YulIdentifier",
+																	"src": "621:3:0"
+																},
+																"nodeType": "YulFunctionCall",
+																"src": "621:32:0"
+															},
+															"variableNames": [
+																{
+																	"name": "z",
+																	"nodeType": "YulIdentifier",
+																	"src": "616:1:0"
+																}
+															]
+														}
+													]
+												},
+												"evmVersion": "shanghai",
+												"externalReferences": [
+													{
+														"declaration": 5,
+														"isOffset": false,
+														"isSlot": false,
+														"src": "629:1:0",
+														"valueSize": 1
+													},
+													{
+														"declaration": 5,
+														"isOffset": false,
+														"isSlot": false,
+														"src": "643:1:0",
+														"valueSize": 1
+													},
+													{
+														"declaration": 7,
+														"isOffset": false,
+														"isSlot": false,
+														"src": "632:1:0",
+														"valueSize": 1
+													},
+													{
+														"declaration": 7,
+														"isOffset": false,
+														"isSlot": false,
+														"src": "646:1:0",
+														"valueSize": 1
+													},
+													{
+														"declaration": 10,
+														"isOffset": false,
+														"isSlot": false,
+														"src": "616:1:0",
+														"valueSize": 1
+													}
+												],
+												"id": 12,
+												"nodeType": "InlineAssembly",
+												"src": "592:72:0"
+											}
+										]
+									},
+									"documentation": {
+										"id": 3,
+										"nodeType": "StructuredDocumentation",
+										"src": "274:222:0",
+										"text": "@notice Returns ceil(x / y)\n @dev division by 0 has unspecified behavior, and must be checked externally\n @param x The dividend\n @param y The divisor\n @return z The quotient, ceil(x / y)"
+									},
+									"id": 14,
+									"implemented": true,
+									"kind": "function",
+									"modifiers": [],
+									"name": "divRoundingUp",
+									"nameLocation": "511:13:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 8,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 5,
+												"mutability": "mutable",
+												"name": "x",
+												"nameLocation": "533:1:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 14,
+												"src": "525:9:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 4,
+													"name": "uint256",
+													"nodeType": "ElementaryTypeName",
+													"src": "525:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 7,
+												"mutability": "mutable",
+												"name": "y",
+												"nameLocation": "544:1:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 14,
+												"src": "536:9:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 6,
+													"name": "uint256",
+													"nodeType": "ElementaryTypeName",
+													"src": "536:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "524:22:0"
+									},
+									"returnParameters": {
+										"id": 11,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 10,
+												"mutability": "mutable",
+												"name": "z",
+												"nameLocation": "578:1:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 14,
+												"src": "570:9:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 9,
+													"name": "uint256",
+													"nodeType": "ElementaryTypeName",
+													"src": "570:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "569:11:0"
+									},
+									"scope": 15,
+									"src": "502:169:0",
+									"stateMutability": "pure",
+									"virtual": false,
+									"visibility": "internal"
+								}
+							],
+							"scope": 16,
+							"src": "248:426:0",
+							"usedErrors": [],
+							"usedEvents": []
+						}
+					],
+					"src": "46:628:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

@@ -1,0 +1,47 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"title": "Math functions that do not check inputs or outputs",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Contains methods that perform common math functions but do not do any overflow or underflow checks",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"libraries/UnsafeMath.sol": "UnsafeMath"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"libraries/UnsafeMath.sol": {
+			"keccak256": "0xd6387f2ba9cbbb651830e52e51881e5189cc15ed3d38559108597213109ca08c",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://7ef6e845d6b3f4e1e7e678a759d1298e050fbbb0f0dcaccf1126dd4cfe041eb0",
+				"dweb:/ipfs/QmPpxVdrEHTc6wdr7cSBzMNwrPHJWdhN5qFK8H1sNKamTj"
+			]
+		}
+	},
+	"version": 1
+}

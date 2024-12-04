@@ -1,0 +1,46 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"title": "Math library for liquidity",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"libraries/LiquidityMath.sol": "LiquidityMath"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"libraries/LiquidityMath.sol": {
+			"keccak256": "0xf863a342166d90068fed75af532c6f75bcf7a2e6f445cd47fca52448771152d7",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://fae72765f1eb801ce906998110e9768fc0f078a1fa6ef5272df8ce66ce9d8a48",
+				"dweb:/ipfs/QmVXJBzJDfR283sxuYAqyFqP3asX4d4sSbGUm22PXAo3cQ"
+			]
+		}
+	},
+	"version": 1
+}

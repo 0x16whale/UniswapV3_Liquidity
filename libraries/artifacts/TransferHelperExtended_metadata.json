@@ -1,0 +1,69 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"libraries/TransferHelperExtended.sol": "TransferHelperExtended"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"interfaces/IERC20.sol": {
+			"keccak256": "0xc6052699ee5b28e22ef62931f6e8ffe2a6816189a4b01e9bfc0d66e092727b7f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8ed7303a19ab7676840c8bd6e9493ad34066d9d8663e001990ac6c5fe2cbad84",
+				"dweb:/ipfs/QmQy1MDCtfkX7aMBPC9ehtfn9VcAc71QXsGa9vmBNm64Ja"
+			]
+		},
+		"libraries/Address.sol": {
+			"keccak256": "0xce0b059bf4ac0737665a88a7d0dd1552f45ea22303d4c659e4d8501c2c6cbf7d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b856aed5169ca1d9c167de1298a8a7a989443b7e2b507eef90a8646b41e945c1",
+				"dweb:/ipfs/QmWeDyutEyaBaY1SFh7xbUFZb5X895Wki2hCD5QN5pTAP2"
+			]
+		},
+		"libraries/TransferHelper.sol": {
+			"keccak256": "0xf391b1d26025bf5d50ac10d4e84a1d1353f67c7109c2bb32f034cefab132a7a5",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://e45f9b60388a9d3280ff0595c0f799f76935f0caa13de1999a4b99cdd43f9563",
+				"dweb:/ipfs/QmSNMTPHowQhV9ShLcMi86qjvhmqhBiAaEfxc4Bx1qAEP4"
+			]
+		},
+		"libraries/TransferHelperExtended.sol": {
+			"keccak256": "0x870930a6fcc6f068f7b063cf9fc9eda2cc134d812f7edbdd20a0f389bf7de163",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://8d7593bc62b803c3ebe317178f3a5e333b9c2def0f1c1e860aae3d59477e1140",
+				"dweb:/ipfs/QmT2WXfCstzVSxjmoz5nFshFbxX6Zwj7vnY2q2n5RRjfNC"
+			]
+		}
+	},
+	"version": 1
+}
