@@ -43,8 +43,8 @@ async function main() {
     const USDT=new ethers.Contract(USDTAddress, ERC20ABI.abi, owner);
     const FlyDoge=new ethers.Contract(FlyDogeAddress, ERC20ABI.abi, owner);
 
-    const AddLiquidityAddress="0xEEbc3160f8721A1A601662D86392BD610F1A835a";
-    const AddLiquidity=new ethers.Contract(AddLiquidityAddress, AddLiquidityABI.abi, owner);
+    // const AddLiquidityAddress="0x1a77B0E515c511ff02508470Ed661cd5057F1e28";
+    // const AddLiquidity=new ethers.Contract(AddLiquidityAddress, AddLiquidityABI.abi, owner);
 
     // const addLiquidity=await hre.ethers.getContractFactory("AddLiquidity");
     // const AddLiquidity=await addLiquidity.deploy(base_nonfungiblePositionManager);
@@ -162,32 +162,29 @@ async function main() {
     // //eth-flyDoge
     // await MintNewPosition(FlyDogeAddress, 10000000000000n, 900000000000000000000n, 79228162514264337593543950336n,"ETH-FlyDoge");
 
-    async function IncreaseLiquidity(tokenId){
+    async function IncreaseLiquidity(tokenId, token0, token1, amount0, amount1){
       try{
         //increaseLiquidityCurrentRange
-        const IncreaseLiquidityParams={
-          tokenId: tokenId,
-          amountAdd0: ethers.parseEther("0.0001"),
-          amountAdd1: 100n * 10n**6n 
-        };
         const increaseLiquidity=await AddLiquidity.increaseLiquidityCurrentRange(
-          IncreaseLiquidityParams.tokenId,
-          IncreaseLiquidityParams.amountAdd0,
-          IncreaseLiquidityParams.amountAdd1
+          tokenId,
+          token0,
+          token1,
+          amount0,
+          amount1
         );
         const increaseLiquidityTx=await increaseLiquidity.wait();
         console.log("increaseLiquidity success:", increaseLiquidityTx);
       }catch(e){
-        console.log("IncreaseLiquidity fail");
+        console.log("IncreaseLiquidity fail:",e);
       }
     }
 
     //WETH-USDC
-    await IncreaseLiquidity(2702n);
+    await IncreaseLiquidity(2702n, USDCAddress, WETHAddress, 100n * 10n**6n, ethers.parseEther("0.001"));
     //WETH-USDT
-    await IncreaseLiquidity(2703n);
+    await IncreaseLiquidity(2703n, WETHAddress, USDTAddress, ethers.parseEther("0.001"), 100n * 10n**8n);
     //WETH-FlyDog
-    await IncreaseLiquidity(2704n);
+    await IncreaseLiquidity(2704n, WETHAddress, FlyDogeAddress, ethers.parseEther("0.001"), 100n * 10n**18n);
 
     
     

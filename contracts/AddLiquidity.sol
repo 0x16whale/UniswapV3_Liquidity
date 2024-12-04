@@ -97,8 +97,6 @@ contract AddLiquidity is IERC721Receiver{
         emit MintEvent(tokenId, liquidity);
     }
 
-    
-
     function createAndMintLiquidity(
         CreatePoolAndInit calldata createParams, 
         MintNewPositionParams calldata mintpParams
@@ -115,6 +113,8 @@ contract AddLiquidity is IERC721Receiver{
 
     function increaseLiquidityCurrentRange(
         uint256 tokenId,
+        address token0,
+        address token1,
         uint256 amountAdd0,
         uint256 amountAdd1
     )
@@ -122,7 +122,12 @@ contract AddLiquidity is IERC721Receiver{
         returns (
             uint128 liquidity
         )
-    {
+    {   
+        IERC20(token0).transferFrom(msg.sender,address(this), amountAdd0);
+        IERC20(token1).transferFrom(msg.sender,address(this), amountAdd1);
+
+        IERC20(token0).approve(nonfungiblePositionManager, amountAdd0);
+        IERC20(token1).approve(nonfungiblePositionManager, amountAdd1);
         INonfungiblePositionManager.IncreaseLiquidityParams memory params =
             INonfungiblePositionManager.IncreaseLiquidityParams({
                 tokenId: tokenId,
